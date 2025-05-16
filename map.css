@@ -10,19 +10,23 @@ body {
 }
 
 #map {
-  width: 100%; /* Adjust width to your desired size */
-  height: 100%; /* Adjust height to your desired size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
-  border-radius: 8px; /* Optional: rounded corners */
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
+
+/* Map overlay SVG */
 #map svg {
   opacity: 50%;
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  pointer-events: none; /* Prevent SVG from blocking map events */
 }
+
+/* Circles must be interactive for tooltips */
 circle {
   pointer-events: auto;
 }
