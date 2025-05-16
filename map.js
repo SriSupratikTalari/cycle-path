@@ -30,19 +30,21 @@ map.on('load', async () => {
       },
     });
   
-//     // 3. Load additional JSON data (e.g., BlueBikes station data)
-//     let jsonData;
-//     try {
-//       const jsonurl = INPUT_BLUEBIKES_CSV_URL;
+    // 3. Load additional JSON data (e.g., BlueBikes station data)
+    let jsonData;
+    try {
+      const jsonurl = 'https://dsc106.com/labs/lab07/data/bluebikes-stations.json';
   
-//       // Await JSON fetch
-//       jsonData = await d3.json(jsonurl);
+      // Await JSON fetch
+      jsonData = await d3.json(jsonurl);
   
-//       console.log('Loaded JSON Data:', jsonData); // Log to verify structure
-//     } catch (error) {
-//       console.error('Error loading JSON:', error); // Handle errors
-//     }
+      console.log('Loaded JSON Data:', jsonData); // Log to verify structure
+    } catch (error) {
+      console.error('Error loading JSON:', error); // Handle errors
+    }
+    let stations = jsonData.data.stations;
+    console.log('Stations Array:', stations)
   });
-  console.log('Hello')
+
 // let stations = jsonData.data.stations;
 // console.log('Stations Array:', stations);
